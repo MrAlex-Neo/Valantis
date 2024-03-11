@@ -2,7 +2,7 @@ import axios from "axios";
 import md5 from "md5";
 
 const instance = axios.create({
-    baseURL: 'http://api.valantis.store:40000/'
+    baseURL: 'https://api.valantis.store:41000/'
 });
 
 instance.interceptors.request.use((config) => {
