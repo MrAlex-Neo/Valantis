@@ -106,8 +106,10 @@ const Brain = () => {
   const arrowClickHandler = (e) => {
     if (e === "left" && countPage > 1) {
       setCountPage((e) => e - 1);
+      setRender(null)
     } else if (e === "right") {
       setCountPage((e) => e + 1);
+      setRender(null)
     }
   };
   return (
