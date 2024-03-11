@@ -4,11 +4,13 @@ import { fetchProducts } from "../../redux/slices/products";
 import AllProd from "../ProdsPage";
 import Pagination from "../../components/Pagination";
 import Loading from "../../components/Loading";
+import CategoryBox from "../../components/Category";
+
 import "./style.css";
 
 const Brain = () => {
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.products.data); // получаем данные в redux
+  const data = useSelector((state) => state.products.products.data); // получаем данные в redux
   const [step, setStep] = useState(0); // счетчик порядка поочередности действий
   const [countPage, setCountPage] = useState(1); // счетчик страниц
   const [countElem] = useState(50); // счетчик элементов на странице (в дальнейшем можно будет просто менять колличество элементов на странице)
@@ -49,12 +51,12 @@ const Brain = () => {
   }, [countPage]);
 
   // Вывод ключевых данныx в консоль
-  useEffect(() => {
-    console.log(`
-    ${countPage} - номер траницы
-    ${limit} - лимит товаров на странице(с учётом повторяющихся)
-    ${offset} - с какого товара начинается запрос`);
-  }, [countPage, offset, limit]);
+  // useEffect(() => {
+  //   console.log(`
+  //   ${countPage} - номер траницы
+  //   ${limit} - лимит товаров на странице(с учётом повторяющихся)
+  //   ${offset} - с какого товара начинается запрос`);
+  // }, [countPage, offset, limit]);
 
   // основная функция древа запросов по значению step
   useEffect(() => {
@@ -95,7 +97,7 @@ const Brain = () => {
       const fetchData = async () => {
         try {
           const response = await dispatch(fetchProducts(obj));
-          console.log(response);
+          // console.log(response);
         } catch (error) {
           console.log(error);
         }
@@ -115,12 +117,15 @@ const Brain = () => {
     }
   };
   return (
-    <div>
+    <div className="brainBox">
+      <div className="header">
+        <h1>Продукты:</h1>
+        <CategoryBox />
+      </div>
       {render !== null ? (
         <div>
-          <h1>Продукты:</h1>
           <AllProd data={render} />
-          <Pagination arrowClick={arrowClickHandler} />
+          <Pagination page={countPage} arrowClick={arrowClickHandler} />
         </div>
       ) : (
         <Loading />

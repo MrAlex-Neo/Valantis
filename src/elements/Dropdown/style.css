@@ -1,0 +1,19 @@
+.dropdown {
+  cursor: pointer;
+}
+.dropdown label {
+  font-size: calc(0.64vw + 18px);
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+.dropdown select {
+  cursor: pointer;
+  font-size: calc(0.45vw + 13.4px);
+  font-weight: 700;
+  padding: 0.2em;
+}
+.dropdown .option {
+  cursor: pointer;
+  font-size: calc(0.45vw + 13.4px);
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */

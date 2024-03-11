@@ -5,7 +5,7 @@ import "./style.css";
 
 const AllProd = ({ data }) => {
   useEffect(() => {
-    console.log(data);
+    // console.log(data);
   }, [data]);
 
   const renderElem = data.map((item, i) => {

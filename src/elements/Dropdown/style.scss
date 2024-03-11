@@ -1,0 +1,19 @@
+.dropdown {
+  cursor: pointer;
+  label {
+    font-size: calc(0.64vw + 18px); //30-20
+    font-weight: 600;
+    margin-right: 0.5em;
+  }
+  select {
+    cursor: pointer;
+    font-size: calc(0.45vw + 13.4px); //22-15
+    font-weight: 700;
+    padding: 0.2em;
+  }
+  .option {
+    cursor: pointer;
+    font-size: calc(0.45vw + 13.4px); //22-15
+    font-weight: 500;
+  }
+}

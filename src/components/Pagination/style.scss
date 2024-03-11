@@ -1,11 +1,24 @@
-.navigation{
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  .arrowLeft {
+  }
+  .arrowRight {
+    transform: rotate(180deg);
+  }
+  .page {
+    font-size: calc(0.45vw + 13.4px);
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgb(220, 217, 249) 0%,
+      rgb(172, 224, 217) 89.8%
+    );
+    width: calc(2.56vw + 31px);
+    height: calc(2.56vw + 31px);
     display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    .arrowLeft{
-
-    }
-    .arrowRight{
-        transform: rotate(180deg);
-    }
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 }

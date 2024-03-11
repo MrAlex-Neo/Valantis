@@ -11,6 +11,9 @@ const Navigation = (props) => {
       <div className="arrowLeft" name="left" onClick={clickHandler}>
         <Arrow data="left"/>
       </div>
+      <div className="page">
+        {props.page}
+      </div>
       <div className="arrowRight" name="right" onClick={clickHandler}>
         <Arrow data="right"/>
       </div>
