@@ -3,24 +3,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../redux/slices/products";
 import AllProd from "../ProdsPage";
 import Pagination from "../../components/Pagination";
+import Loading from "../../components/Loading";
 import "./style.css";
 
 const Brain = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.products.data); // получаем данные в redux
-  const [step, setStep] = useState(0); // счетчик порядка поочередности действий 
+  const [step, setStep] = useState(0); // счетчик порядка поочередности действий
   const [countPage, setCountPage] = useState(1); // счетчик страниц
   const [countElem] = useState(50); // счетчик элементов на странице (в дальнейшем можно будет просто менять колличество элементов на странице)
   const [offset, setOffset] = useState(0); // порядковый индекс продукта, с которого начинается запрос на сервер
   const [limit, setLimit] = useState(50); // лимит продуктов(отличается от countElem тем, что изменяется при выявлении повторяющихся элементах)
   const [uniqueData, setUniqueData] = useState(null); // профильтрованный список элементов
   const [render, setRender] = useState(null); // профильтрованный список элементов в колличестве 50 шт
-  const [obj, setObj] = useState({ // params для запроса на сервер
+  const [obj, setObj] = useState({
+    // params для запроса на сервер
     action: "get_ids",
     params: { offset: offset, limit: limit },
   });
 
-  // useEffect для отслеживания колличества элементов в массиве после фильтрации фильтрации 
+  // useEffect для отслеживания колличества элементов в массиве после фильтрации фильтрации
   useEffect(() => {
     if (uniqueData && uniqueData.length < 50 && uniqueData.length > 1) {
       setLimit((e) => e + 1);
@@ -62,7 +64,7 @@ const Brain = () => {
         action: "get_ids",
         params: { offset: offset, limit: limit },
       });
-      setStep(0); 
+      setStep(0);
     }
     // получение объектов по массиву id
     if (data && data.result && step === 0) {
@@ -106,19 +108,23 @@ const Brain = () => {
   const arrowClickHandler = (e) => {
     if (e === "left" && countPage > 1) {
       setCountPage((e) => e - 1);
-      setRender(null)
+      setRender(null);
     } else if (e === "right") {
       setCountPage((e) => e + 1);
-      setRender(null)
+      setRender(null);
     }
   };
   return (
     <div>
-      <h1>Продукты:</h1>
-
-      {render !== null ? <AllProd data={render} /> : null}
-
-      <Pagination arrowClick={arrowClickHandler} />
+      {render !== null ? (
+        <div>
+          <h1>Продукты:</h1>
+          <AllProd data={render} />
+          <Pagination arrowClick={arrowClickHandler} />
+        </div>
+      ) : (
+        <Loading />
+      )}
     </div>
   );
 };
