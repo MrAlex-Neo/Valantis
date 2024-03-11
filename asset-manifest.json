@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Valantis/static/css/main.5c777418.css",
-    "main.js": "/Valantis/static/js/main.fd2ab3a9.js",
+    "main.js": "/Valantis/static/js/main.722906b6.js",
     "static/js/453.6393fe9b.chunk.js": "/Valantis/static/js/453.6393fe9b.chunk.js",
     "index.html": "/Valantis/index.html",
     "static/media/arrow.svg": "/Valantis/static/media/arrow.d174d3122c56cee5847dc6df6dd5daf5.svg",
     "main.5c777418.css.map": "/Valantis/static/css/main.5c777418.css.map",
-    "main.fd2ab3a9.js.map": "/Valantis/static/js/main.fd2ab3a9.js.map",
+    "main.722906b6.js.map": "/Valantis/static/js/main.722906b6.js.map",
     "453.6393fe9b.chunk.js.map": "/Valantis/static/js/453.6393fe9b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5c777418.css",
-    "static/js/main.fd2ab3a9.js"
+    "static/js/main.722906b6.js"
   ]
 }
