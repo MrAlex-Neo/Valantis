@@ -1,0 +1,20 @@
+.arrow {
+  background: radial-gradient(circle at 10% 20%, rgb(220, 217, 249) 0%, rgb(172, 224, 217) 89.8%);
+  width: calc(2.56vw + 31px);
+  height: calc(2.56vw + 31px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.5s, box-shadow 0.5s;
+}
+.arrow:hover {
+  box-shadow: 5px 5px 0px 0px rgb(53, 73, 224);
+}
+.arrow:active {
+  background-color: var(--bgActiveImg);
+  box-shadow: 5px 5px 0px 0px var(--bgActiveImg);
+}
+.arrow img {
+  width: calc(0.77vw + 11px);
+}/*# sourceMappingURL=style.css.map */

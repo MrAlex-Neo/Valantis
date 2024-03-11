@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  padding: calc(1.9vw + 13px) calc(5vw + 1.5px);
+  background: linear-gradient(102.2deg, rgb(109, 118, 150) 7.1%, rgb(89, 72, 79) 14.7%, rgb(69, 92, 79) 28%, rgb(204, 85, 67) 43.4%, rgb(237, 181, 121) 60.2%, rgb(219, 230, 175) 76.8%);
+}
+
+button {
+  all: unset;
+}
+
+p {
+  font-size: calc(0.45vw + 13.4px);
+  font-weight: 500;
+}
+
+span {
+  font-size: calc(0.26vw + 13px);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: calc(0.77vw + 25px);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: calc(0.7vw + 21.5px);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: calc(0.64vw + 18px);
+  font-weight: 600;
+}/*# sourceMappingURL=style.css.map */

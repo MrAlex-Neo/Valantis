@@ -1,0 +1,7 @@
+.allProd {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}/*# sourceMappingURL=style.css.map */

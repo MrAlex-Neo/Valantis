@@ -1,0 +1,29 @@
+.prodCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: calc(3.8vw + 106px);
+  background: radial-gradient(
+    759px at 14% 22.3%,
+    rgb(10, 64, 88) 0%,
+    rgb(15, 164, 102) 90%
+  );
+  color: #fff;
+  padding: calc(0.26vw + 13px);
+  border-radius: 10px;
+  transform: perspective(800px) rotateY(-2deg);
+  transition: transform 1s ease 0s;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+
+  &:hover {
+    transform: perspective(800px) rotateY(-24deg);
+  }
+  cursor: pointer;
+  .prodCardCategory{
+    display: flex;
+    flex-direction: column;
+  }
+}

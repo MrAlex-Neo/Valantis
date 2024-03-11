@@ -1,0 +1,8 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+.navigation .arrowRight {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=style.css.map */
