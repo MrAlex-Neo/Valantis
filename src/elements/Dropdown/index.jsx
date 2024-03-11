@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css'
 
 const Dropdown = (props) => {
     const {categories} = props
   const [selectedOption, setSelectedOption] = useState('');
+  const [categList, setCategList] = useState(null);
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
     props.categoryClick(event.target.value)
   };
+
+  useEffect(() => {
+    setCategList(categories)
+  }, [categories])
+
+
 
   return (
     <div className='dropdown'>
